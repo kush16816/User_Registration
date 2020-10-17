@@ -7,11 +7,13 @@ public class Validator {
 
 	static final String fName = "^[A-Z][A-Za-z]{2,}";
 	static final String lName = "^[A-Z][A-Za-z]{2,}";
+	static final String emailId = "^[a-z0-9]+[a-z0-9.+-_]+@[a-z0-9]+.[a-z]{2,}(.[a-z]{2})?$";
 
 	static Matcher match;
 
 	static final String f_Name = "First Name";
 	static final String l_Name = "Last Name";
+	static final String email_ID = "EmailID";
 
 	/**
 	 * @param input Contains input to be verified
@@ -32,6 +34,16 @@ public class Validator {
 			}
 		case l_Name:
 			match = Pattern.compile(lName).matcher(input);
+
+			if (match.matches()) {
+				System.out.println("Your " + type + " is in valid format");
+				return true;
+			} else {
+				System.out.println("Your " + type + " is not in valid format");
+				return false;
+			}
+		case email_ID:
+			match = Pattern.compile(emailId).matcher(input);
 
 			if (match.matches()) {
 				System.out.println("Your " + type + " is in valid format");

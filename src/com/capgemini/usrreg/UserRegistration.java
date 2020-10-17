@@ -10,15 +10,18 @@ public class UserRegistration {
 	 */
 	static String firstName;
 	static String lastName;
+	static String emailID;
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
 		addFirstName();
 		addLastName();
+		addEmailID();
 
 		Validator.validate(firstName, Validator.f_Name);
 		Validator.validate(lastName, Validator.l_Name);
+		Validator.validate(emailID, Validator.email_ID);
 
 	}
 
@@ -38,5 +41,14 @@ public class UserRegistration {
 
 		System.out.println("Enter your last name");
 		lastName = sc.next();
+	}
+	
+	/**
+	 * Takes email ID from user
+	 */
+	public static void addEmailID() {
+
+		System.out.println("Enter your email ID");
+		emailID = sc.next();
 	}
 }
