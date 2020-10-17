@@ -9,6 +9,7 @@ public class Validator {
 	static final String lName = "^[A-Z][A-Za-z]{2,}";
 	static final String emailId = "^[a-z0-9]+[a-z0-9.+-_]+@[a-z0-9]+.[a-z]{2,}(.[a-z]{2})?$";
 	static final String mobNo = "[1-9][0-9][\\s][1-9][0-9]{9}";
+	static final String passWord = "^(?=.*[A-Z])(?=.*[@$!#*])(?=.*[0-9]).{8,}";
 
 	static Matcher match;
 
@@ -16,6 +17,7 @@ public class Validator {
 	static final String l_Name = "Last Name";
 	static final String email_ID = "EmailID";
 	static final String mob_No = "Moblie No";
+	static final String pass_Word = "Password";
 
 	/**
 	 * @param input Contains input to be verified
@@ -56,6 +58,16 @@ public class Validator {
 			}
 		case mob_No:
 			match = Pattern.compile(mobNo).matcher(input);
+
+			if (match.matches()) {
+				System.out.println("Your " + type + " is in valid format");
+				return true;
+			} else {
+				System.out.println("Your " + type + " is not in valid format");
+				return false;
+			}
+		case pass_Word:
+			match = Pattern.compile(passWord).matcher(input);
 
 			if (match.matches()) {
 				System.out.println("Your " + type + " is in valid format");
