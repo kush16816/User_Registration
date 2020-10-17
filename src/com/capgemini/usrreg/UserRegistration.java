@@ -11,6 +11,7 @@ public class UserRegistration {
 	static String firstName;
 	static String lastName;
 	static String emailID;
+	static String mobileNo;
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -18,10 +19,12 @@ public class UserRegistration {
 		addFirstName();
 		addLastName();
 		addEmailID();
+		addMobileNo();
 
 		Validator.validate(firstName, Validator.f_Name);
 		Validator.validate(lastName, Validator.l_Name);
 		Validator.validate(emailID, Validator.email_ID);
+		Validator.validate(mobileNo, Validator.mob_No);
 
 	}
 
@@ -50,5 +53,14 @@ public class UserRegistration {
 
 		System.out.println("Enter your email ID");
 		emailID = sc.next();
+	}
+	
+	/**
+	 * Takes mobile no from user
+	 */
+	public static void addMobileNo() {
+
+		System.out.println("Enter your mobile no.");
+		mobileNo = sc.next();
 	}
 }
