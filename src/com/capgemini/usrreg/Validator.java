@@ -30,50 +30,50 @@ public class Validator {
 			match = Pattern.compile(fName).matcher(input);
 
 			if (match.matches()) {
-				System.out.println("Your " + type + " is in valid format");
+				System.out.println("The mood of user is happy for " + type );
 				return true;
 			} else {
-				System.out.println("Your " + type + " is not in valid format");
+				System.out.println("The mood of user is sad for " + type );
 				return false;
 			}
 		case l_Name:
 			match = Pattern.compile(lName).matcher(input);
 
 			if (match.matches()) {
-				System.out.println("Your " + type + " is in valid format");
+				System.out.println("The mood of user is happy for " + type );
 				return true;
 			} else {
-				System.out.println("Your " + type + " is not in valid format");
+				System.out.println("The mood of user is sad for " + type );
 				return false;
 			}
 		case email_ID:
 			match = Pattern.compile(emailId).matcher(input);
 
 			if (match.matches()) {
-				System.out.println("Your " + type + " is in valid format");
+				System.out.println("The mood of user is happy for " + type );
 				return true;
 			} else {
-				System.out.println("Your " + type + " is not in valid format");
+				System.out.println("The mood of user is sad for " + type );
 				return false;
 			}
 		case mob_No:
 			match = Pattern.compile(mobNo).matcher(input);
 
 			if (match.matches()) {
-				System.out.println("Your " + type + " is in valid format");
+				System.out.println("The mood of user is happy for " + type );
 				return true;
 			} else {
-				System.out.println("Your " + type + " is not in valid format");
+				System.out.println("The mood of user is sad for " + type );
 				return false;
 			}
 		case pass_Word:
 			match = Pattern.compile(passWord).matcher(input);
 
 			if (match.matches()) {
-				System.out.println("Your " + type + " is in valid format");
+				System.out.println("The mood of user is happy for " + type );
 				return true;
 			} else {
-				System.out.println("Your " + type + " is not in valid format");
+				System.out.println("The mood of user is sad for " + type );
 				return false;
 			}
 		}
